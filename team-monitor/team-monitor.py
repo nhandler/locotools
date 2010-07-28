@@ -66,7 +66,7 @@ print ""
 
 global_count = global_count - app_count
 
-print "Unapproved Teams ( " + str(global_count) + " )"
+print "Unapproved Teams ( " + str(global_count) + " ):"
 for team in global_teams:
 	try:
 		trash = approved_teams[team]
