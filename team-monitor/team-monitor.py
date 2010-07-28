@@ -5,11 +5,6 @@ app_name  = "LoCo Council Audit"
 # This will tell LP what is running
 # This should only be changed if that string is wrong.
 
-output    = "./data/dataset"
-# This will be combined with the team name to set up
-# the output file ( output-team-name )
-
-
 team_all  = "locoteams"
 team_app  = "locoteams-approved"
 
@@ -43,8 +38,9 @@ all_members = all_teams.members_details
 global_count = 0
 
 for member in all_members:
-	global_teams[member.member.name] = member.member.display_name
-	global_count = global_count + 1
+	if member.member.is_team:
+		global_teams[member.member.name] = member.member.display_name
+		global_count = global_count + 1
 
 app_teams   = launchpad.people[team_app]
 app_members = app_teams.members_details
@@ -52,8 +48,9 @@ app_members = app_teams.members_details
 app_count    = 0
 
 for member in app_members:
-	approved_teams[member.member.name] = member.member.display_name
-	app_count = app_count + 1
+	if member.member.is_team:
+		approved_teams[member.member.name] = member.member.display_name
+		app_count = app_count + 1
 
 print "Approved Teams ( " + str(app_count) + " ): "
 for team in approved_teams:
