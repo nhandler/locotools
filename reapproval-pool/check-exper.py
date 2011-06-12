@@ -38,7 +38,7 @@ import json
 import sys
 
 
-server    = 'edge'
+server    = 'production'
 cachedir  = os.path.expanduser("~/.launchpadlib/cache")
 
 print "Connecting to LP -- Fill out the forms if the pop up."

@@ -17,7 +17,7 @@ import string  # For the split
 import os
 import iso_codes
 
-server    = 'edge'
+server    = 'production'
 cachedir  = os.path.expanduser("~/.launchpadlib/cache")
 
 print "Connecting to Launchpad..."

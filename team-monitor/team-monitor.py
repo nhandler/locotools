@@ -24,7 +24,7 @@ import json
 import sys
 
 
-server    = 'edge'
+server    = 'production'
 cachedir  = os.path.expanduser("~/.launchpadlib/cache")
 
 launchpad = Launchpad.login_with(app_name, server)

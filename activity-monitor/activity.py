@@ -24,7 +24,7 @@ import os
 import json
 import sys
 
-server    = 'edge'
+server    = 'production'
 cachedir  = os.path.expanduser("~/.launchpadlib/cache")
 
 print "Enter the Launchpad team name, plox"

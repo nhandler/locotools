@@ -24,7 +24,7 @@ import os
 import json
 import sys
 
-server    = 'edge'
+server    = 'production'
 cachedir  = os.path.expanduser("~/.launchpadlib/cache")
 
 print "I'll count the groups on a team, just for you"
